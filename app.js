@@ -82,6 +82,16 @@ app.post('/expressions', (req, res, next) => {
   }
 });
 
+app.delete('/animals/:id',(req,res,next)=>{
+  const animalIndex = getIndexById(req.params.id,animals);
+  if(animalIndex !== -1){
+    animals.splice(animalIndex,1);
+    res.status(204).send();
+  }else{
+    res.status(404).send();
+  }
+});
+
 app.delete('/expressions/:id', (req, res, next) => {
   const expressionIndex = getIndexById(req.params.id, expressions);
   if (expressionIndex !== -1) {
