@@ -1,0 +1,14 @@
+{
+  "name": "express_machine",
+  "version": "1.0.0",
+  "description": "a program that helps demonstrate the http verbs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gwamaka Charles",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
