@@ -62,6 +62,16 @@ app.put('/expressions/:id', (req, res, next) => {
   }
 });
 
+app.post('/animals', (req, res, next) => {
+  const receivedAnimal = createElement('animals', req.query);
+  if (receivedAnimal) {
+    animals.push(receivedAnimal);
+    res.status(201).send(receivedAnimal);
+  }else{
+    res.status(404).send();
+  }
+});
+
 app.post('/expressions', (req, res, next) => {
   const receivedExpression = createElement('expressions', req.query);
   if (receivedExpression) {
